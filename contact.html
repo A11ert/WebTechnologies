@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Turkish Food</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <p id="brand">Food around the world</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Contact</h1>
+
+    <section>
+        <h2>Turkish dishes</h2>
+
+        <table>
+            <caption>Eight dishes and the cities they come from</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Category</th>
+                    <th scope="col">Dish</th>
+                    <th scope="col">From</th>
+                    <th scope="col">Main ingredient</th>
+                    <th scope="col">Served with</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Kebabs</th>
+                    <th scope="row">Doner</th>
+                    <td>Bursa</td>
+                    <td>Lamb or chicken</td>
+                    <td>Flatbread</td>
+                </tr>
+                <tr>
+                    <th scope="row">İskender</th>
+                    <td>Bursa</td>
+                    <td>Lamb</td>
+                    <td>Yoghurt, tomato sauce</td>
+                </tr>
+                <tr>
+                    <th scope="row">Adana</th>
+                    <td>Adana</td>
+                    <td>Minced lamb</td>
+                    <td>Bulgur, peppers</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Dough</th>
+                    <th scope="row">Mantı</th>
+                    <td>Kayseri</td>
+                    <td>Minced beef</td>
+                    <td>Garlic yoghurt</td>
+                </tr>
+                <tr>
+                    <th scope="row">Lahmacun</th>
+                    <td>Şanlıurfa</td>
+                    <td>Minced lamb</td>
+                    <td>Lemon, parsley</td>
+                </tr>
+                <tr>
+                    <th scope="row">Pide</th>
+                    <td>Black Sea</td>
+                    <td>Cheese or egg</td>
+                    <td>Nothing, it is enough</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="2">Desserts</th>
+                    <th scope="row">Baklava</th>
+                    <td>Gaziantep</td>
+                    <td>Pistachio, filo</td>
+                    <td>Syrup, tea</td>
+                </tr>
+                <tr>
+                    <th scope="row">Künefe</th>
+                    <td>Hatay</td>
+                    <td>Cheese, kadayıf</td>
+                    <td>Kaymak</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Total</th>
+                    <td colspan="2">8 dishes</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>Write to me</h2>
+
+        <form>
+            <fieldset>
+                <legend>About you</legend>
+                <p>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Yernaz" maxlength="40" required>
+                </p>
+
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </p>
+
+                <p>
+                    <label for="tried">Dishes tried</label>
+                    <input type="number" id="tried" name="tried" min="0" max="8" value="0">
+                </p>
+
+                <p>
+                    <label for="last-eaten">Last eaten</label>
+                    <input type="date" id="last-eaten" name="last-eaten">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Message</legend>
+
+                <p>
+                    <label for="favourite">Favourite dish</label>
+                    <select id="favourite" name="favourite">
+                        <option value="doner">Doner</option>
+                        <option value="iskender">İskender</option>
+                        <option value="adana">Adana</option>
+                        <option value="manti">Mantı</option>
+                        <option value="lahmacun">Lahmacun</option>
+                        <option value="pide">Pide</option>
+                        <option value="baklava">Baklava</option>
+                        <option value="kunefe">Künefe</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Found this site via</legend>
+                    <p>
+                        <input type="radio" id="via-search" name="source" value="search" checked>
+                        <label for="via-search">Search</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="via-friend" name="source" value="friend">
+                        <label for="via-friend">A friend</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="via-social" name="source" value="social">
+                        <label for="via-social">Social media</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="via-university" name="source" value="university">
+                        <label for="via-university">University</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="message">Your message</label>
+                    <textarea id="message" name="message" rows="4" maxlength="500" placeholder="Which dish should I add?"></textarea>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="reply" name="reply" value="yes">
+                    <label for="reply">Reply by email</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <button type="submit">Send</button>
+            </p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Yernaz Amangeldin</p>
+</footer>
+
+</body>
+</html>
