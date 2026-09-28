@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doner — Turkish Food</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/assignment2.css">
+</head>
+
+<body>
+<header>
+    <p id="brand">Food around the world</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="assignment2.html">SecondAssignment</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<h1>Assignment 2</h1>
+
+    <section>
+        <h2>Task 1</h2>
+
+        <div class="mondrian">
+            <div class="block blue"></div>
+            <div class="block light-1"></div>
+            <div class="block yellow"></div>
+            <div class="block light-2"></div>
+            <div class="block red"></div>
+            <div class="block light-3"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Task 2 &mdash; Component library (Flexbox)</h2>
+
+        <!-- 1. navigation bar: the buttons stay at the right edge -->
+        <h3 class="demo-label">1. Navigation bar</h3>
+        <div class="bar">
+            <p class="bar-logo">Doner</p>
+            <ul class="bar-links">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Recipes and cooking guides</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+            <div class="bar-buttons">
+                <button class="btn">Sign in</button>
+                <button class="btn btn-solid">Order</button>
+            </div>
+        </div>
+
+        <!-- 2. cards: different text, equal height, buttons on one line -->
+        <h3 class="demo-label">2. Cards</h3>
+        <div class="cards">
+            <article class="card">
+                <h4 class="card-title">Doner</h4>
+                <p class="card-text">Grilled on a vertical spit.</p>
+                <button class="btn btn-solid">Order</button>
+            </article>
+            <article class="card">
+                <h4 class="card-title">Manti</h4>
+                <p class="card-text">Tiny dumplings filled with spiced lamb, served under
+                    garlic yoghurt and a spoonful of melted butter with red pepper. A dish
+                    that takes a whole afternoon to fold by hand.</p>
+                <button class="btn btn-solid">Order</button>
+            </article>
+            <article class="card">
+                <h4 class="card-title">Lahmacun</h4>
+                <p class="card-text">Thin flatbread baked with minced meat, tomato and parsley.</p>
+                <button class="btn btn-solid">Order</button>
+            </article>
+        </div>
+
+        <!-- 3. pagination: numbers centred, count pinned right -->
+        <h3 class="demo-label">3. Pagination</h3>
+        <div class="pagination">
+            <span class="pagination-side" aria-hidden="true"></span>
+            <div class="pager">
+                <a class="page" href="#">&lsaquo;</a>
+                <a class="page page-current" href="#">1</a>
+                <a class="page" href="#">2</a>
+                <a class="page" href="#">3</a>
+                <a class="page" href="#">4</a>
+                <a class="page" href="#">&rsaquo;</a>
+            </div>
+            <p class="pagination-side pagination-count">128 results</p>
+        </div>
+
+        <!-- 4. comment: the text never slides under the avatar -->
+        <h3 class="demo-label">4. Comment</h3>
+        <div class="comment">
+            <img class="comment-avatar" src="images/doner.jpg" alt="">
+            <div class="comment-body">
+                <p class="comment-name">Yernaz</p>
+                <p class="comment-text">I cooked this for the first time last weekend and the
+                    yoghurt sauce was the part I got wrong &mdash; it has to be at room
+                    temperature or it splits the moment it touches the hot butter. Second
+                    attempt came out much closer to what I ate in Istanbul.</p>
+            </div>
+        </div>
+
+        <!-- 5. pricing: the recommended plan is taller, with no fixed height -->
+        <h3 class="demo-label">5. Pricing</h3>
+        <div class="plans">
+            <div class="plan">
+                <h4 class="plan-name">Basic</h4>
+                <p class="plan-price">1 900 &#8376;</p>
+                <p class="plan-text">One main dish.</p>
+                <button class="btn">Choose</button>
+            </div>
+            <div class="plan plan-featured">
+                <h4 class="plan-name">Standard</h4>
+                <p class="plan-price">3 400 &#8376;</p>
+                <p class="plan-text">Main dish, salad and a drink. The plan most people pick.</p>
+                <button class="btn btn-solid">Choose</button>
+            </div>
+            <div class="plan">
+                <h4 class="plan-name">Family</h4>
+                <p class="plan-price">6 200 &#8376;</p>
+                <p class="plan-text">Four main dishes and two drinks.</p>
+                <button class="btn">Choose</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Task 3 &mdash; Three layouts, one markup (Grid and Flexbox)</h2>
+        <p class="demo-note">The same twelve articles below. To change the mode, swap the
+            second class on the container: <code>layout-grid</code>,
+            <code>layout-list</code> or <code>layout-magazine</code>. The HTML never changes.</p>
+
+        <div class="layout layout-grid">
+            <article class="item">
+                <img class="item-img" src="images/doner.jpg" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Doner Kebab</h4>
+                    <p class="item-text">Meat stacked on a vertical spit and turned slowly against the fire for hours, then shaved off in thin strips as the outside crisps. The oldest street food in the country and still the one every other dish is measured against.</p>
+                </div>
+                <time class="item-date">12 May</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/manti.webp" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Manti</h4>
+                    <p class="item-text">Tiny hand folded dumplings under garlic yoghurt.</p>
+                </div>
+                <time class="item-date">9 May</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/ottoman-empire.webp" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Lahmacun</h4>
+                    <p class="item-text">Thin flatbread baked with minced meat, tomato and parsley, rolled up around a handful of greens and eaten with the hands.</p>
+                </div>
+                <time class="item-date">3 May</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/doner.jpg" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Pide</h4>
+                    <p class="item-text">Boat shaped bread with cheese and egg.</p>
+                </div>
+                <time class="item-date">28 Apr</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/manti.webp" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Iskender</h4>
+                    <p class="item-text">Doner laid over cubes of pide bread, covered in tomato sauce and finished at the table with butter poured over it while it is still foaming.</p>
+                </div>
+                <time class="item-date">24 Apr</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/ottoman-empire.webp" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Simit</h4>
+                    <p class="item-text">Sesame bread ring.</p>
+                </div>
+                <time class="item-date">21 Apr</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/doner.jpg" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Baklava</h4>
+                    <p class="item-text">Forty layers of pastry, pistachio and syrup, cut into diamonds before baking.</p>
+                </div>
+                <time class="item-date">17 Apr</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/manti.webp" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Menemen</h4>
+                    <p class="item-text">Eggs cooked slowly into tomatoes, green peppers and onion until the whole pan turns soft, served in the pan it was cooked in with bread to wipe it clean.</p>
+                </div>
+                <time class="item-date">14 Apr</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/ottoman-empire.webp" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Kumpir</h4>
+                    <p class="item-text">Baked potato, whipped with butter.</p>
+                </div>
+                <time class="item-date">10 Apr</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/doner.jpg" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Kokorec</h4>
+                    <p class="item-text">Seasoned offal wrapped tightly and roasted over charcoal, chopped fine and served in bread.</p>
+                </div>
+                <time class="item-date">6 Apr</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/manti.webp" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Ayran</h4>
+                    <p class="item-text">Salted yoghurt drink.</p>
+                </div>
+                <time class="item-date">2 Apr</time>
+            </article>
+            <article class="item">
+                <img class="item-img" src="images/ottoman-empire.webp" alt="">
+                <div class="item-body">
+                    <h4 class="item-title">Kunefe</h4>
+                    <p class="item-text">Shredded pastry around melting cheese, soaked in syrup and eaten hot.</p>
+                </div>
+                <time class="item-date">29 Mar</time>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
