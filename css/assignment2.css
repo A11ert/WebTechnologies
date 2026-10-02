@@ -1,35 +1,17 @@
-/* ==========================================================
-   Assignment #2 - Advanced CSS (Flexbox & Grid)
-   Second stylesheet, loaded after style.css.
-   style.css keeps the header, nav and footer of the site;
-   everything here belongs to the three assignment tasks only.
-
-   No Bootstrap, no JavaScript, no media queries.
-   ========================================================== */
-
-
-/* ---------- design tokens ----------
-   One place for the colours, spacing and fonts, so all three
-   tasks look like one piece of work. Change a value here and
-   it changes everywhere it is used.                          */
 
 :root {
-    /* colours of the Task 1 composition - taken from the drawing */
     --mondrian-blue:   #3b6fd4;
     --mondrian-yellow: #edba00;
     --mondrian-red:    #c62828;
     --mondrian-light:  #efefef;
-    --mondrian-line:   #1a1a1a;   /* the grid gap shows this colour */
+    --mondrian-line:   #1a1a1a;
 
-    /* interface palette for Tasks 2 and 3
-       TODO: pick your own - these are only a starting point */
-    --ink:      #1f2430;          /* main text            */
-    --muted:    #5d6577;          /* secondary text       */
-    --surface:  #ffffff;          /* cards, bars          */
-    --line:     #dfe3ea;          /* hairlines, dividers  */
-    --accent:   #c14e26;          /* buttons, active state - same paprika as Assignment 1 */
+    --ink:      #1f2430;
+    --muted:    #5d6577;
+    --surface:  #ffffff;
+    --line:     #dfe3ea;
+    --accent:   #c14e26;
 
-    /* spacing scale - use these instead of typing random rem values */
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 1rem;
@@ -40,71 +22,30 @@
     --font-ui:   Verdana, sans-serif;
     --font-text: Georgia, serif;
 }
-
-
-/* Padding and borders must not make an element wider than we asked for.
-   Without this a card asked for 14rem would really occupy 14rem plus its
-   own padding and border, and three of them would stop fitting on one row. */
 main,
 main * {
     box-sizing: border-box;
 }
 
-
-/* style.css caps main at 50rem, which is right for reading an article but
-   leaves Task 3 stuck at two columns however wide the window gets. This
-   page needs the real width so the column count can visibly follow it.
-   Only assignment2.html loads this file, so the other pages keep 50rem. */
 main {
     max-width: 90rem;
 }
 
 
-/* ==========================================================
-   TASK 1 - Geometric composition (CSS Grid)
-
-   The map you worked out from the drawing, 6 columns x 6 rows.
-   Remember: 6 columns means 7 vertical lines, numbered 1 to 7.
-
-           col1  col2  col3  col4  col5  col6
-   row1 |  BLUE  BLUE  LGHT1 LGHT1 LGHT1 LGHT1
-   row2 |  BLUE  BLUE  YELW  YELW  LGHT2 LGHT2
-   row3 |  BLUE  BLUE  YELW  YELW  LGHT2 LGHT2
-   row4 |  RED   RED   RED   ....  LGHT2 LGHT2
-   row5 |  RED   RED   RED   ....  LGHT3 LGHT3
-   row6 |  RED   RED   RED   ....  LGHT3 LGHT3
-
-   ".... " is left empty on purpose - no element is placed there,
-   so the dark background of the container shows through.
-   ========================================================== */
-
 .mondrian {
-    /* 1. six equal columns and six equal rows.
-          "1fr" = one equal share of the space, so the tracks follow the window.
-          The rows must be declared too - the blocks are empty, so rows sized
-          by their content would be 0 tall and nothing would be visible. */
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
 
-    /* 2. the black lines are the gap, not borders or margins.
-          A gap paints nothing, so the background of this element shows
-          through it; the padding does the same job around the outside.
-          Both in %, so the lines keep their proportion as the square grows. */
     background-color: var(--mondrian-line);
-    gap: 1.2%;
-    padding: 1.2%;
+    gap: 1%;
+    padding: 1%;
 
-    /* 3. square, centred, and never taller than the screen.
-          min() takes whichever is smaller - the width available here, or a
-          share of the window height - and aspect-ratio makes the height
-          follow that width. This is the only size in the whole task. */
     width: min(100%, 85vh);
     aspect-ratio: 1 / 1;
     margin-inline: auto;
 }
 
-/* every block is only a colour - no width, no height, no border, no margin */
 .blue {
     background-color: var(--mondrian-blue);
     grid-column: 1/3;
@@ -136,12 +77,8 @@ main {
     grid-row: 5/7;
 }
 
-/* ==========================================================
-   TASK 2 - Component library (Flexbox)
-   Flexbox only. No Grid, no floats, no fixed widths or heights.
-   ========================================================== */
+/* task 2 */
 
-/* the five components share one look, written once */
 .bar,
 .card,
 .pagination,
@@ -155,12 +92,12 @@ main {
 
 .demo-label {
     font-family: var(--font-ui);
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--muted);
     margin: var(--space-4) 0 var(--space-2);
 }
 
-/* one button, used by the bar, the cards and the pricing table */
+
 .btn {
     font-family: var(--font-ui);
     font-size: 0.9rem;
@@ -179,9 +116,7 @@ main {
 }
 
 
-/* ---------- (1) navigation bar ----------
-   margin-left: auto on the button group swallows all the free space,
-   so the buttons stay at the right edge however long the links grow. */
+/* nav bar */
 
 .bar {
     display: flex;
@@ -218,10 +153,7 @@ main {
 }
 
 
-/* ---------- (2) cards ----------
-   Flex items are stretched to the height of the tallest one by default,
-   so the cards match with no height anywhere. Inside each card,
-   margin-top: auto on the button pushes every button onto one line. */
+/* cards */
 
 .cards {
     display: flex;
@@ -250,9 +182,7 @@ main {
 }
 
 
-/* ---------- (3) pagination ----------
-   The two sides grow equally from a basis of 0, so the pager between
-   them sits in the true centre whatever the result count says. */
+/* pag */
 
 .pagination {
     display: flex;
@@ -291,10 +221,7 @@ main {
 }
 
 
-/* ---------- (4) comment ----------
-   The avatar and the text are two separate flex items, so the text is
-   its own column. It wraps inside that column and can never run under
-   the avatar the way it would with a float. */
+/* com */
 
 .comment {
     display: flex;
@@ -302,7 +229,7 @@ main {
 }
 
 .comment-avatar {
-    flex: none;              /* the avatar is allowed its own size */
+    flex: none;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -311,7 +238,7 @@ main {
 
 .comment-body {
     flex: 1;
-    min-width: 0;            /* lets a very long word wrap instead of overflowing */
+    min-width: 0;
 }
 
 .comment-name {
@@ -325,10 +252,7 @@ main {
 }
 
 
-/* ---------- (5) pricing ----------
-   align-items: center stops the plans being stretched, so each one is
-   as tall as its own content. The recommended plan is taller only
-   because it carries more padding - no height is set anywhere. */
+/* price */
 
 .plans {
     display: flex;
@@ -372,20 +296,12 @@ main {
 }
 
 
-/* ==========================================================
-   TASK 3 - Three layouts, one markup (Grid + Flexbox)
-   Grid switches the three modes, Flexbox arranges the inside
-   of a single item. Only the class on .layout changes.
-   ========================================================== */
+/* task 3*/
 
 .demo-note {
     color: var(--muted);
     margin: 0 0 var(--space-3);
 }
-
-/* true in all three modes: the item is a flex container and the body
-   takes the free space. In a column that pushes the date to the bottom;
-   in a row the same line pushes the date to the right edge. */
 
 .item {
     display: flex;
@@ -426,9 +342,7 @@ main {
 }
 
 
-/* ---------- mode 1: grid of cards ----------
-   auto-fill with minmax works out how many columns fit in the window
-   by itself, so the count follows the width with no media query. */
+/* grid */
 
 .layout-grid {
     display: grid;
@@ -439,11 +353,6 @@ main {
 .layout-grid .item {
     flex-direction: column;
 }
-
-
-/* ---------- mode 2: compact list ----------
-   One column, and the item becomes a row: picture on the left, the
-   text beside it, the date pushed to the right edge by .item-body. */
 
 .layout-list {
     display: grid;
@@ -462,11 +371,6 @@ main {
     width: 6rem;
     aspect-ratio: 4 / 3;
 }
-
-
-/* ---------- mode 3: magazine ----------
-   The same responsive columns, but the first item spans two of them
-   and two rows, and the other eleven flow around it. */
 
 .layout-magazine {
     display: grid;

@@ -1,27 +1,3 @@
-/* ==========================================================
-   Turkish Food - Assignment #1
-   One external stylesheet for all three pages.
-
-   Colours - four, each written in a different format:
-     #2e2119            (hex)  dark brown - text, header, footer
-     rgb(193, 78, 38)   (rgb)  paprika    - borders and accents
-     hsl(38, 82%, 56%)  (hsl)  saffron    - site name, quote
-     whitesmoke         (name) light grey - background, striped rows
-
-   Fonts - two families:
-     Verdana - headings, menu, table, form labels
-     Georgia - body text
-
-   Units:
-     px  - borders
-     rem - font sizes and outer spacing
-     em  - padding inside links and fields
-     %   - widths of images and the table
-     vh  - minimum height of the page
-   ========================================================== */
-
-
-/* ---------- tag selectors ---------- */
 
 body {
     margin: 0;
