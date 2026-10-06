@@ -39,6 +39,288 @@
     </div>
 </nav>
 
+<!-- Task 2: hero, the long text is hidden on a phone -->
+<header class="hero d-flex align-items-center text-center text-white">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <p class="section-label">Turkish kitchen in Astana</p>
+                <h1 class="display-4 fw-bold mb-3">Taste of Turkey</h1>
+                <p class="lead mb-4 d-none d-md-block">Döner from the vertical spit, hand-folded mantı and baklava
+                    with pistachios: recipes that travelled from nomad camps to Ottoman palaces.</p>
+                <p class="mb-4 d-md-none">Döner, mantı and baklava in the heart of Astana.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+                    <a href="#dishes" class="btn btn-warning btn-lg">See the dishes</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Book a table</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- Task 2: two columns, on a phone the text comes first -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-6 order-md-2">
+                    <p class="section-label">About</p>
+                    <h2 class="mb-3">From nomad camps to palace kitchens</h2>
+                    <p>Turkish cuisine started with the food of Central Asian nomads: mutton, yogurt and dried
+                        meat that could travel on horseback. Mantı and pastırma come from that time.</p>
+                    <p class="mb-0">Later the palace kitchens of the Ottoman Empire mixed recipes from the Balkans,
+                        the Middle East and the Mediterranean. We cook those recipes today, with bread from our own
+                        oven every morning.</p>
+                </div>
+                <div class="col-12 col-md-6 order-md-1">
+                    <figure class="mb-0">
+                        <img src="images/ottoman-empire.webp" class="img-fluid rounded shadow-sm"
+                             alt="Map of the Ottoman Empire growing between 1300 and 1683">
+                        <figcaption class="small text-body-secondary mt-2">The Ottoman Empire, 1300–1683: one
+                            kitchen, three continents.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task 1: my own CSS Grid and media queries, no Bootstrap classes in this section -->
+    <section id="services" class="services">
+        <div class="services-inner">
+            <div class="services-head">
+                <p class="section-label">Services</p>
+                <h2 class="services-title">What we offer</h2>
+                <p class="services-intro">Eat with us, take the food home or let us cook for your party.</p>
+            </div>
+            <div class="services-grid">
+                <article class="service">
+                    <div class="service-icon" aria-hidden="true">🍽️</div>
+                    <h3>Dine-in</h3>
+                    <p>A calm hall for a slow Turkish dinner, with fresh bread from our own oven.</p>
+                </article>
+                <article class="service">
+                    <div class="service-icon" aria-hidden="true">🛵</div>
+                    <h3>Delivery</h3>
+                    <p>Hot döner and pide anywhere in Astana in about 40 minutes.</p>
+                </article>
+                <article class="service">
+                    <div class="service-icon" aria-hidden="true">🥡</div>
+                    <h3>Takeaway</h3>
+                    <p>Call ahead and pick up your order on the way home, no waiting.</p>
+                </article>
+                <article class="service">
+                    <div class="service-icon" aria-hidden="true">🎉</div>
+                    <h3>Catering</h3>
+                    <p>Meze platters and kebabs for birthdays, weddings and office parties.</p>
+                </article>
+                <article class="service">
+                    <div class="service-icon" aria-hidden="true">🧑‍🍳</div>
+                    <h3>Cooking classes</h3>
+                    <p>Learn to fold mantı and roll baklava pastry with our chef on Saturdays.</p>
+                </article>
+                <article class="service">
+                    <div class="service-icon" aria-hidden="true">🎁</div>
+                    <h3>Gift cards</h3>
+                    <p>A Turkish dinner for two in a card: an easy present for any occasion.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task 2: Bootstrap cards, 1 / 2 / 3 per row -->
+    <section id="dishes" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <p class="section-label">Menu</p>
+                <h2>Our dishes</h2>
+                <p class="text-body-secondary mb-0">Six classics we cook every day.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header dish-emoji" aria-hidden="true">🥙</div>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Döner kebab</h3>
+                            <p class="card-text">Thin slices from the vertical spit in warm flatbread with salad
+                                and garlic sauce.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">2 500 ₸</span>
+                            <span class="badge text-bg-warning">Bestseller</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header dish-emoji" aria-hidden="true">🥟</div>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Mantı</h3>
+                            <p class="card-text">Tiny lamb dumplings under garlic yogurt and red pepper butter.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">3 200 ₸</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header dish-emoji" aria-hidden="true">🫓</div>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Lahmacun</h3>
+                            <p class="card-text">Crispy thin flatbread with minced meat, tomato and herbs. Roll it
+                                up with lemon and parsley.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">2 200 ₸</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header dish-emoji" aria-hidden="true">🍢</div>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Adana kebab</h3>
+                            <p class="card-text">Hand-minced lamb with chilli on a wide skewer, grilled over
+                                charcoal.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">4 300 ₸</span>
+                            <span class="badge text-bg-danger">Spicy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header dish-emoji" aria-hidden="true">🍯</div>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Baklava</h3>
+                            <p class="card-text">Thin layers of pastry with pistachios and syrup, baked every
+                                morning.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">1 800 ₸</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header dish-emoji" aria-hidden="true">☕</div>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Turkish coffee</h3>
+                            <p class="card-text">Brewed in a copper cezve and served with a piece of lokum.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">900 ₸</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task 2: accordion component -->
+    <section id="faq" class="py-5 bg-cream">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <p class="section-label">FAQ</p>
+                    <h2>Questions guests ask</h2>
+                    <p class="mb-0">No answer here? Call us, we pick up every day from 10:00 to 23:00.</p>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqHalal" aria-expanded="true" aria-controls="faqHalal">
+                                    Is the meat halal?
+                                </button>
+                            </h3>
+                            <div id="faqHalal" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes. All our meat comes from certified halal suppliers.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqVegetarian" aria-expanded="false" aria-controls="faqVegetarian">
+                                    Do you have vegetarian dishes?
+                                </button>
+                            </h3>
+                            <div id="faqVegetarian" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes: lentil soup, vegetable pide, salads and almost all
+                                    desserts.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqSpicy" aria-expanded="false" aria-controls="faqSpicy">
+                                    Is the food very spicy?
+                                </button>
+                            </h3>
+                            <div id="faqSpicy" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Most dishes are mild. Adana kebab is spicy, and you can
+                                    always ask for extra chilli.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqDelivery" aria-expanded="false" aria-controls="faqDelivery">
+                                    How does delivery work?
+                                </button>
+                            </h3>
+                            <div id="faqDelivery" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Call the number at the bottom of the page. We deliver
+                                    anywhere in Astana in about 40 minutes, free for orders from 10 000 ₸.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqGroups" aria-expanded="false" aria-controls="faqGroups">
+                                    Can I book a table for a group?
+                                </button>
+                            </h3>
+                            <div id="faqGroups" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes. Call us a day ahead: the hall fits groups of up to
+                                    20 people.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Task 2: contacts in the footer, 1 column on a phone, 3 from 768px -->
+<footer id="contact" class="bg-dark text-white py-5" data-bs-theme="dark">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <h2 class="h5">Turkish Food</h2>
+                <p class="text-body-secondary mb-0">Turkish recipes cooked fresh every day in Astana.</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <h2 class="h5">Visit us</h2>
+                <p class="mb-1">12 Turan Avenue, Astana</p>
+                <p class="mb-0">Every day 10:00–23:00</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <h2 class="h5">Call us</h2>
+                <p class="mb-1"><a class="link-light" href="tel:+77000000000">+7 700 000 00 00</a></p>
+                <p class="text-body-secondary mb-0">Table booking and delivery</p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <p class="small text-body-secondary text-center mb-0">© 2026 Turkish Food · Assignment 3 · Yernaz Amangeldin</p>
+    </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
