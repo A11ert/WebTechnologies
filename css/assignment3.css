@@ -1,81 +1,12 @@
-/* Assignment 3 - my own styles, loaded after Bootstrap */
-
-:root {
-    --paprika: #a8401d;
-    --saffron: #eba733;
-    --cream: #f8f1e7;
-}
-
-h1, h2, h3 {
-    font-family: Georgia, serif;
-}
-
-/* small label above a heading */
-.section-label {
-    color: var(--paprika);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
-.bg-cream {
-    background-color: var(--cream);
-}
-
-
-/* ---------- Task 2: hero ---------- */
-
-/* the photo with a dark layer on top, so the white text stays readable */
-.hero {
-    min-height: 70vh;
-    background: linear-gradient(rgba(33, 37, 41, 0.75), rgba(33, 37, 41, 0.75)),
-                url("../images/doner.jpg") center / cover no-repeat;
-}
-
-.hero .section-label {
-    color: var(--saffron);
-}
-
-
-/* ---------- Task 2: dishes ---------- */
-
-.dish-emoji {
-    background-color: var(--cream);
-    font-size: 3.5rem;
-    line-height: 1;
-    padding: 1.5rem 0;
-    text-align: center;
-}
-
-
-/* ---------- Task 1: services, mobile-first ---------- */
-
-/* phone (base styles): 1 per row, everything centred */
 .services {
-    background-color: var(--cream);
+    background-color: #f8f9fa;
     padding: 3rem 1rem;
-}
-
-/* a limit, not a fixed width: on a phone the block is still 100% wide */
-.services-inner {
-    max-width: 70rem;
-    margin: 0 auto;
-}
-
-.services-head {
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .services-title {
     font-size: 1.75rem;
-}
-
-.services-intro {
-    color: #555;
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
 }
 
 .services-grid {
@@ -86,47 +17,27 @@ h1, h2, h3 {
 
 .service {
     background-color: #fff;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.service-icon {
-    font-size: 2.5rem;
-    line-height: 1;
-}
-
-.service h3 {
-    font-size: 1.2rem;
-    margin: 1rem 0 0.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
 }
 
 .service p {
-    color: #555;
     margin-bottom: 0;
 }
 
-/* tablet: 2 per row, text aligned left, more space */
 @media (min-width: 768px) {
     .services {
-        padding: 4rem 2rem;
+        padding: 3rem 2rem;
     }
 
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .service {
-        text-align: left;
     }
 }
 
-/* laptop: 3 per row, bigger heading */
 @media (min-width: 992px) {
     .services {
-        padding: 5rem 2rem;
+        padding: 3rem 5rem;
     }
 
     .services-title {
@@ -135,6 +46,5 @@ h1, h2, h3 {
 
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
     }
 }
