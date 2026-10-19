@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AITU Hack 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/task2.css">
+</head>
+<body>
+<main class="container py-5">
+    <h1 class="mb-4">AITU Hack 2026 Registration</h1>
+
+    <form class="row g-3">
+        <div class="col-md-6">
+            <label for="fullName" class="form-label">Full name *</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" minlength="2" maxlength="40" required>
+            <div class="invalid-feedback">From 2 to 40 characters.</div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="email" class="form-label">University email *</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="age" class="form-label">Age *</label>
+            <input type="number" class="form-control" id="age" name="age" min="16" max="30" step="1" required>
+            <div class="invalid-feedback">A whole number from 16 to 30.</div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="teamSize" class="form-label">Team size *</label>
+            <input type="number" class="form-control" id="teamSize" name="teamSize" min="1" max="4" step="1" required>
+            <div class="invalid-feedback">A whole number from 1 to 4.</div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="track" class="form-label">Track *</label>
+            <select class="form-select" id="track" name="track" required>
+                <option value="">Choose...</option>
+                <option>Web</option>
+                <option>Mobile</option>
+                <option>AI</option>
+                <option>GameDev</option>
+            </select>
+            <div class="invalid-feedback">Choose a track.</div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="arrival" class="form-label">Arrival day *</label>
+            <input type="date" class="form-control" id="arrival" name="arrival" min="2026-11-20" max="2026-11-22" required>
+            <div class="invalid-feedback">From 20 to 22 November 2026.</div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="checkIn" class="form-label">Check-in time *</label>
+            <input type="time" class="form-control" id="checkIn" name="checkIn" min="09:00" max="18:00" step="1800" required>
+            <div class="invalid-feedback">From 09:00 to 18:00, every 30 minutes.</div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="fee" class="form-label">Entry fee (₸) *</label>
+            <input type="number" class="form-control" id="fee" name="fee" min="0" max="5000" step="500" required>
+            <div class="invalid-feedback">From 0 to 5000, in steps of 500.</div>
+        </div>
+
+        <fieldset class="col-12">
+            <legend class="fs-6">Experience level *</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="level" id="beginner" required>
+                <label class="form-check-label" for="beginner">Beginner</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="level" id="intermediate">
+                <label class="form-check-label" for="intermediate">Intermediate</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="level" id="advanced">
+                <label class="form-check-label" for="advanced">Advanced</label>
+                <div class="invalid-feedback">Choose your level.</div>
+            </div>
+        </fieldset>
+
+        <div class="col-md-6">
+            <label for="github" class="form-label">GitHub profile</label>
+            <input type="url" class="form-control" id="github" name="github">
+            <div class="invalid-feedback">A full link, for example https://github.com/name</div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="password" class="form-label">Password *</label>
+            <input type="password" class="form-control" id="password" name="password" minlength="8" maxlength="20" required>
+            <div class="invalid-feedback">From 8 to 20 characters.</div>
+        </div>
+
+        <div class="col-12">
+            <label for="motivation" class="form-label">Motivation *</label>
+            <textarea class="form-control" id="motivation" name="motivation" rows="4" minlength="50" maxlength="300" required></textarea>
+            <div class="invalid-feedback">From 50 to 300 characters.</div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rules" name="rules" required>
+                <label class="form-check-label" for="rules">I agree with the rules *</label>
+                <div class="invalid-feedback">You must agree with the rules.</div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</main>
+</body>
+</html>

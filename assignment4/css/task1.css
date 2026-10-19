@@ -1,0 +1,65 @@
+:root {
+    --green: #0F6B5F;
+    --orange: #F2A93B;
+    --dark: #16302B;
+    --light: #F4F7F5;
+    --line: #E6EFEC;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--dark);
+    background-color: var(--line);
+}
+
+.ticket-card {
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.ticket-header {
+    background-color: var(--green);
+    color: #fff;
+}
+
+.form-control,
+.form-select {
+    background-color: var(--light);
+    border-color: var(--line);
+    border-radius: 1rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.phone-code {
+    background-color: var(--green);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+/* Bootstrap buttons take their colors from --bs-btn-* variables */
+.btn-trip {
+    --bs-btn-color: var(--green);
+    --bs-btn-border-color: var(--green);
+    --bs-btn-active-bg: var(--green);
+    --bs-btn-active-border-color: var(--green);
+    --bs-btn-border-radius: 50rem;
+}
+
+.btn-clear {
+    --bs-btn-color: var(--dark);
+    --bs-btn-border-color: var(--dark);
+}
+
+.btn-find {
+    --bs-btn-bg: var(--orange);
+    --bs-btn-border-color: var(--orange);
+    --bs-btn-hover-bg: var(--orange);
+    --bs-btn-hover-border-color: var(--orange);
+}

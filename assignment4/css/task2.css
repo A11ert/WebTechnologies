@@ -1,0 +1,13 @@
+/* :user-invalid works only after the user changed the field (or pressed Register) */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: #dc3545;
+}
+
+/* Bootstrap hides .invalid-feedback, show it after an invalid field */
+input:user-invalid ~ .invalid-feedback,
+select:user-invalid ~ .invalid-feedback,
+textarea:user-invalid ~ .invalid-feedback {
+    display: block;
+}
