@@ -1,0 +1,270 @@
+/* Assignment 5 - one stylesheet for all three tasks, colours from the Too Good To Go site */
+
+:root {
+    --cream: #fff4e6;
+    --peach: #fde0c1;
+    --maroon: #6e0402;
+    --red: #950603;
+    --ink: #1f1410;
+    --text: #5a453b;
+    --leaf: #2f6b4f;
+    --line: rgba(110, 4, 2, 0.15);
+    --radius: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    background: var(--cream);
+    color: var(--text);
+    font-family: "Geist", system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+    color: var(--maroon);
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    margin: 0 0 0.75rem;
+}
+
+/* ---------- navigation ---------- */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 1100px;
+    margin: 0 auto 1rem;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: var(--maroon);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    background: var(--maroon);
+    color: white;
+}
+
+/* ---------- cards and layout ---------- */
+
+.card {
+    max-width: 1100px;
+    margin: 0 auto 1rem;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* ---------- controls ---------- */
+
+button {
+    padding: 0.7rem 1.4rem;
+    border: 2px solid var(--maroon);
+    border-radius: 2rem;
+    background: var(--maroon);
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--red);
+}
+
+button.ghost {
+    background: transparent;
+    color: var(--maroon);
+}
+
+button.ghost:hover {
+    background: var(--peach);
+}
+
+button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    border: 2px solid var(--line);
+    border-radius: 0.6rem;
+    font: inherit;
+}
+
+.row input, .row select {
+    width: auto;
+    flex: 1 1 10rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible {
+    outline: 3px solid var(--leaf);
+    outline-offset: 2px;
+}
+
+/* ---------- states: win / lose / empty ---------- */
+
+.win {
+    color: var(--leaf);
+    font-weight: 600;
+}
+
+.lose {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.over {
+    color: white;
+    background: var(--red);
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+}
+
+.empty {
+    color: var(--text);
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* ---------- task 1: game ---------- */
+
+.big {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0.5rem 0 1rem;
+}
+
+/* ---------- task 2: kanban board ---------- */
+
+progress {
+    width: 100%;
+    height: 1rem;
+    accent-color: var(--leaf);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.column {
+    padding: 1rem;
+    background: var(--cream);
+    border-radius: var(--radius);
+}
+
+.order {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+    border-left: 6px solid var(--peach);
+    border-radius: 0.6rem;
+}
+
+.order.p2 {
+    border-left-color: var(--red);
+}
+
+.order.p3 {
+    border-left-color: var(--maroon);
+}
+
+.order h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.order p {
+    margin: 0 0 0.5rem;
+}
+
+.order button {
+    padding: 0.3rem 0.9rem;
+    margin-right: 0.4rem;
+}
+
+/* ---------- task 3: form ---------- */
+
+.layout {
+    display: grid;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .layout {
+        grid-template-columns: 3fr 2fr;
+        align-items: start;
+    }
+}
+
+.layout .card {
+    margin: 0;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-top: 0.75rem;
+    font-weight: 600;
+}
+
+.error {
+    display: block;
+    min-height: 1.2rem;
+    color: var(--red);
+    font-size: 0.9rem;
+}
+
+[aria-invalid="true"] {
+    border-color: var(--red);
+    background: #fff0f0;
+}
+
+[aria-invalid="false"] {
+    border-color: var(--leaf);
+}
+
+form button {
+    margin-top: 1rem;
+}
+
+.ticket {
+    background: var(--peach);
+    border-style: dashed;
+}
+
+.ticket + .ticket {
+    margin-top: 1rem;
+}
+
+.ticket p {
+    margin: 0 0 0.4rem;
+}

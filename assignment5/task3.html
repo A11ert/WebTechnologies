@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task 3 - Ticket builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Geist:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/task3.js" defer></script>
+</head>
+<body>
+<nav>
+    <a href="task1.html">Task 1 · Game</a>
+    <a href="task2.html">Task 2 · Orders</a>
+    <a href="task3.html" aria-current="page">Task 3 · Tickets</a>
+</nav>
+
+<div class="layout">
+    <form id="form" class="card">
+        <h1>Food Rescue Festival tickets</h1>
+        <p id="summary" class="lose" aria-live="assertive"></p>
+
+        <label for="event">Event</label>
+        <select id="event" name="event" required aria-describedby="event-error">
+            <option value="">Choose an event</option>
+            <option>Food Rescue Festival</option>
+            <option>Zero-Waste Cooking Class</option>
+            <option>Bread Saving Workshop</option>
+        </select>
+        <small id="event-error" class="error"></small>
+
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" required aria-describedby="date-error">
+        <small id="date-error" class="error"></small>
+
+        <label for="type">Ticket type</label>
+        <select id="type" name="type" required aria-describedby="type-error">
+            <option value="">Choose a ticket type</option>
+        </select>
+        <small id="type-error" class="error"></small>
+
+        <label for="quantity">Quantity</label>
+        <input id="quantity" name="quantity" type="number" min="1" max="10" value="1" required aria-describedby="quantity-error">
+        <small id="quantity-error" class="error"></small>
+
+        <label for="name">Full name</label>
+        <input id="name" name="name" minlength="2" required autocomplete="name" aria-describedby="name-error">
+        <small id="name-error" class="error"></small>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-error">
+        <small id="email-error" class="error"></small>
+
+        <label for="promo">Promo code (optional)</label>
+        <input id="promo" name="promo" aria-describedby="promo-error">
+        <small id="promo-error" class="error"></small>
+
+        <button>Book tickets</button>
+    </form>
+
+    <div>
+        <aside class="card ticket" aria-live="polite">
+            <h2>Preview</h2>
+            <div id="preview"></div>
+        </aside>
+        <section id="result" class="card ticket" hidden></section>
+    </div>
+</div>
+</body>
+</html>

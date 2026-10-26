@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task 2 - Pickup orders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Geist:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/task2.js" defer></script>
+</head>
+<body>
+<nav>
+    <a href="task1.html">Task 1 · Game</a>
+    <a href="task2.html" aria-current="page">Task 2 · Orders</a>
+    <a href="task3.html">Task 3 · Tickets</a>
+</nav>
+
+<main class="card">
+    <h1>Pickup orders</h1>
+    <div class="row">
+        <input id="search" type="search" placeholder="Search orders" aria-label="Search orders">
+        <select id="tag" aria-label="Filter by shop">
+            <option value="all">All shops</option>
+            <option value="bakery">Bakery</option>
+            <option value="cafe">Cafe</option>
+            <option value="grocery">Grocery</option>
+        </select>
+        <label><input id="sort" type="checkbox"> Sort by priority</label>
+    </div>
+
+    <p>Picked up: <span id="progressText"></span></p>
+    <progress id="progress"></progress>
+
+    <p id="message" aria-live="polite"></p>
+    <p id="empty" class="empty" hidden>Nothing found. Try another search or shop.</p>
+    <div id="board" class="board"></div>
+</main>
+</body>
+</html>
