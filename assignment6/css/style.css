@@ -30,6 +30,27 @@ h1, h2 {
     margin: 0;
 }
 
+nav {
+    max-width: 1300px;
+    margin: 0 auto 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+    background: var(--accent);
+    color: #fff;
+}
+
 header {
     max-width: 1300px;
     margin: 0 auto 16px;
@@ -227,6 +248,91 @@ main {
 .room.found {
     outline: 4px solid var(--yellow);
     outline-offset: -4px;
+}
+
+/* Task 2 */
+.room-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.room-head h2 {
+    margin: 0;
+}
+
+.sort,
+#clear,
+.move {
+    padding: 5px 10px;
+    border: 1px solid #ddd6cc;
+    border-radius: 6px;
+    background: #fff;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#clear {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.space {
+    width: 0;
+    margin-right: -8px;
+}
+
+.leaving {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.flying {
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    pointer-events: none;
+}
+
+#info {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.info-inner {
+    padding: 16px;
+    text-align: center;
+}
+
+.info-inner img {
+    width: 96px;
+    height: 96px;
+}
+
+.info-inner h3 {
+    margin: 4px 0 8px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 22px;
+}
+
+.info-inner ul {
+    margin: 0 0 12px;
+    padding: 0;
+    list-style: none;
+    line-height: 1.7;
+}
+
+.moves {
+    display: grid;
+    gap: 6px;
 }
 
 @media (max-width: 900px) {
